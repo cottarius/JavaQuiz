@@ -13,8 +13,10 @@ public class Question {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String text;
+    private String title;
 
-    @OneToMany(mappedBy = "question", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Answer> answers;
+//    @ManyToOne
+//    @JoinColumn(name = "quiz_id")
+//    private Quiz quiz;
 }
+

@@ -14,7 +14,4 @@ public class Quiz {
     private Long id;
 
     private String title;
-
-    @OneToMany(mappedBy = "quiz", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Question> questions;
 }

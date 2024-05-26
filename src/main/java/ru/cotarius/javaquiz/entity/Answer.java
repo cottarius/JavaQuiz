@@ -13,5 +13,10 @@ public class Answer {
 
     private String text;
 
+    @Column(name = "is_correct")
     private boolean isCorrect;
+
+    @ManyToOne
+    @JoinColumn(name = "question_id")
+    private Question question;
 }

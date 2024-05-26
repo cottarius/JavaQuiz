@@ -1,0 +1,28 @@
+databaseChangeLog:
+  - changeSet:
+      id: "create-table-question"
+      author: "cotarius"
+      changes:
+        - createTable:
+            tableName: question
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: title
+                  type: varchar(4096)
+
+#              - column:
+#                  name: quiz_id
+#                  type: bigint
+#                  constraints:
+#                    foreignKeyName: quiz_question_fk
+#                    referencedTableName: quiz
+#                    referencedColumnNames: id
+#                    deleteCascade: true
+#                    nullable: false
