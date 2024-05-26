@@ -1,0 +1,22 @@
+databaseChangeLog:
+  - changeSet:
+      id: "create-table-answer"
+      author: "cotarius"
+      changes:
+        - createTable:
+            tableName: answer
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: text
+                  type: varchar(4096)
+
+              - column:
+                  name: isCorrect
+                  type: boolean
