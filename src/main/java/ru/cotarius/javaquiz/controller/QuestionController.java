@@ -28,6 +28,11 @@ public class QuestionController {
         long id = random.nextInt(1, questions.size() + 1);
         QuestionDto question = questionService.findById(id);
         List<AnswerDto> answers = answerService.findByQuestionId(question.getId());
+        for (AnswerDto answer : answers) {
+            if (answer.isCorrect()){
+                question.setCorrectAnswer(String.valueOf(answer));
+            }
+        }
         model.addAttribute("question", question);
         model.addAttribute("answers", answers);
         return "question";

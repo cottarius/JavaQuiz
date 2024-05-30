@@ -12,6 +12,7 @@ public class QuestionMapper {
     public Question toQuestion(QuestionDto questionDto) {
         Question question = new Question();
         question.setTitle(questionDto.getTitle());
+        question.setCorrectAnswer(questionDto.getCorrectAnswer());
 //        question.setQuiz(questionDto.getQuiz());
         return question;
     }
@@ -20,6 +21,7 @@ public class QuestionMapper {
         QuestionDto questionDto = new QuestionDto();
         questionDto.setId(question.getId());
         questionDto.setTitle(question.getTitle());
+        questionDto.setCorrectAnswer(question.getCorrectAnswer());
 //        questionDto.setQuiz(question.getQuiz());
         return questionDto;
     }

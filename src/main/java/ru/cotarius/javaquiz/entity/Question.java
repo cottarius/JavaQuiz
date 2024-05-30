@@ -15,6 +15,9 @@ public class Question {
 
     private String title;
 
+    @Column(name = "correct_answer")
+    private String correctAnswer;
+
 //    @ManyToOne
 //    @JoinColumn(name = "quiz_id")
 //    private Quiz quiz;

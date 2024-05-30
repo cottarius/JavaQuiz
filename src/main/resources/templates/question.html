@@ -10,10 +10,31 @@
     <ul>
         <li th:each="answer : ${answers}">
             <label><input type="radio" name="answer" value="[[${answer.id}]]"> [[${answer.text}]]</label><br>
+
         </li>
     </ul>
-    <input type="submit" value="Проверить">
+    <input type="submit" value="Проверить" onclick="checkAnswer()">
 </form>
+
+<script>
+    // Функция для проверки правильности ответа
+    function checkAnswer() {
+        // Получаем выбранный ответ
+        var answer = document.querySelector('input[name="answer"]:checked');
+
+        // Если ответ правильный, то обновляем страницу для следующего вопроса
+        if (answer.valueAsString == [[${question.correctAnswer}]]) {
+            alert("Правильный ответ");
+            window.location.reload();
+        }
+        // Иначе показываем правильный ответ и обновляем страницу для следующего вопроса
+        else {
+            alert("Неправильный ответ. Правильный ответ: [[${question.correctAnswer}]]");
+            window.location.reload();
+        }
+    }
+</script>
+
 </body>
 </html>
 

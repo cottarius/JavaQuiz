@@ -8,5 +8,6 @@ import ru.cotarius.javaquiz.entity.Quiz;
 public class QuestionDto {
     private Long id;
     private String title;
-    private Quiz quiz;
+    private String correctAnswer;
+//    private Quiz quiz;
 }
