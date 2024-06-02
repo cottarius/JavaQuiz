@@ -21,12 +21,12 @@ databaseChangeLog:
                   name: correct_answer
                   type: varchar(4096)
 
-#              - column:
-#                  name: quiz_id
-#                  type: bigint
-#                  constraints:
-#                    foreignKeyName: quiz_question_fk
-#                    referencedTableName: quiz
-#                    referencedColumnNames: id
-#                    deleteCascade: true
-#                    nullable: false
+              - column:
+                  name: module_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: module_question_fk
+                    referencedTableName: module
+                    referencedColumnNames: id
+                    deleteCascade: true
+                    nullable: false

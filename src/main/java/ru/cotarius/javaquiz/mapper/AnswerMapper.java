@@ -31,7 +31,7 @@ public class AnswerMapper {
         return answers.stream().map(this::toAnswerDto).toList();
     }
 
-    public List<AnswerDto> toAnswerDtoList(List<Answer> answers, List<Question> questions) {
-        return answers.stream().map(this::toAnswerDto).toList();
+    public List<Answer> toAnswerList(List<AnswerDto> answerDtos) {
+        return answerDtos.stream().map(this::toAnswer).toList();
     }
 }

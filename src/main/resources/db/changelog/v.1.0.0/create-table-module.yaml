@@ -1,10 +1,10 @@
 databaseChangeLog:
   - changeSet:
-      id: "create-table-quiz"
+      id: "create-table-module"
       author: "cotarius"
       changes:
         - createTable:
-            tableName: quiz
+            tableName: module
             columns:
               - column:
                   name: id

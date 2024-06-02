@@ -1,0 +1,6 @@
+databaseChangeLog:
+  - changeSet:
+      id: "insert-into-module"
+      author: "cotarius"
+  - include:
+      file: /sql/modules.sql

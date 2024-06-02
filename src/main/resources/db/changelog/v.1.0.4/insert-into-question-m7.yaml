@@ -1,0 +1,6 @@
+databaseChangeLog:
+  - changeSet:
+      id: "insert-into-question-m7"
+      author: "cotarius"
+  - include:
+      file: /sql/questions-m7.sql

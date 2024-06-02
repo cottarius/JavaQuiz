@@ -3,7 +3,7 @@ package ru.cotarius.javaquiz.dto;
 import lombok.Data;
 
 @Data
-public class QuizDto {
+public class ModuleDto {
     private Long id;
     private String title;
 }
